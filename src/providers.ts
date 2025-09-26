@@ -57,5 +57,28 @@ export const Providers = {
       }));
       return list;
     }
+  }),
+  /** Calendarific: https://calendarific.com/api/v2/holidays (requer API key) */
+  calendarific: (apiKey: string, base = "https://calendarific.com/api/v2") : HolidayProvider => ({
+    name: "Calendarific",
+    timeoutMs: 2500,
+    retries: 1,
+    async fetchYear(year: number, _abort: AbortSignal) {
+      const url = `${base}/holidays?api_key=${apiKey}&country=BR&year=${year}`;
+      const res = await fetch(url, { signal: _abort });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      // Formato esperado: {response: {holidays: [{date:{iso:'2025-01-01'}, name:'Confraternização...', ...}]}}
+      const holidays = json?.response?.holidays || [];
+      const list: BRHoliday[] = holidays.map((h: any) => ({
+        id: (h?.name || "").toLowerCase().replace(/\s+/g,"_").normalize("NFD").replace(/[^\w_]+/g,""),
+        name: String(h?.name || "Feriado"),
+        scope: "national",
+        date: normDate(h?.date?.iso || h?.date),
+        movable: false,
+        rawSource: "Calendarific"
+      }));
+      return list;
+    }
   })
 };

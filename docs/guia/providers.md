@@ -4,6 +4,7 @@ Esta biblioteca oferece integração com provedores remotos para enriquecer a li
 
 - `Providers.brasilApi()` — consome `https://brasilapi.com.br/api/feriados/v1/{year}`
 - `Providers.nagerDate()` — consome `https://date.nager.at/api/v3/PublicHolidays/{year}/BR`
+- `Providers.calendarific(apiKey)` — consome `https://calendarific.com/api/v2/holidays` (requer API key gratuita)
 
 Exemplo de uso:
 
@@ -11,7 +12,11 @@ Exemplo de uso:
 import { createCalendar, Providers } from 'br-dates-library';
 
 const cal = createCalendar({
-  providers: [Providers.brasilApi(), Providers.nagerDate()],
+  providers: [
+    Providers.brasilApi(),
+    Providers.nagerDate(),
+    Providers.calendarific('YOUR_API_KEY') // opcional
+  ],
 });
 ```
 
