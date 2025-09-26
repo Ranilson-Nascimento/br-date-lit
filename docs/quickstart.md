@@ -1,10 +1,10 @@
-# Quickstart — br-dates-lib
+# Quickstart — br-dates-library
 
 Este guia rápido mostra as operações mais comuns: criar um calendário, verificar dias úteis, usar a CLI e o hook React.
 
 ## Node — exemplo mínimo
 ```ts
-import { createCalendar, parseBR, toBR, Providers } from "br-dates-lib";
+import { createCalendar, parseBR, toBR, Providers } from "br-dates-library";
 
 async function main() {
   const cal = createCalendar({
@@ -24,10 +24,10 @@ main();
 ## CLI
 ```powershell
 # próximo dia útil
-npx br-dates-lib next 2026-05-01 --state SP --city "São Paulo"
+npx br-dates-library next 2026-05-01 --state SP --city "São Paulo"
 
 # lista de feriados do ano
-npx br-dates-lib list 2026 --state SP
+npx br-dates-library list 2026 --state SP
 ```
 
 ## React Hook
@@ -35,7 +35,7 @@ Veja `docs/react-hook.md` para exemplos do hook `useBusinessCalendar`.
 
 ## Cache opcional
 ```ts
-import { createCalendar, Providers, MemoryCache } from "br-dates-lib";
+import { createCalendar, Providers, MemoryCache } from "br-dates-library";
 
 const cal = createCalendar({ providers: [Providers.brasilApi()], cache: new MemoryCache() });
 ```
@@ -62,7 +62,7 @@ node dist/cli.js next 2026-05-01 --state SP --city "São Paulo"
 
 - Usando cache em disco:
 ```ts
-import { createCalendar, Providers, FSCache } from 'br-dates-lib';
+import { createCalendar, Providers, FSCache } from 'br-dates-library';
 
 const cal = createCalendar({ providers: [Providers.brasilApi()], cache: new FSCache('.cache') });
 ```

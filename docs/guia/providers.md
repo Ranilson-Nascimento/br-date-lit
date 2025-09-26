@@ -8,7 +8,7 @@ Esta biblioteca oferece integração com provedores remotos para enriquecer a li
 Exemplo de uso:
 
 ```ts
-import { createCalendar, Providers } from 'br-dates-lib';
+import { createCalendar, Providers } from 'br-dates-library';
 
 const cal = createCalendar({
   providers: [Providers.brasilApi(), Providers.nagerDate()],

@@ -1,5 +1,5 @@
 {
-  "name": "br-dates-lib",
+  "name": "br-dates-library",
   "version": "0.5.0",
   "description": "Datas úteis e feriados do Brasil: simples, robusto, extensível, com fallback local + provedores remotos (BrasilAPI / Nager.Date).",
   "keywords": [
@@ -18,7 +18,7 @@
   "author": "Ranilson Nascimento",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ranilson-Nascimento/br-dates-lib.git"
+    "url": "git+https://github.com/Ranilson-Nascimento/br-dates-library.git"
   },
   "sideEffects": false,
   "type": "module",
@@ -33,7 +33,7 @@
     }
   },
   "bin": {
-    "br-dates-lib": "dist/cli.cjs"
+    "br-dates-library": "dist/cli.cjs"
   },
   "scripts": {
     "build": "tsup",
@@ -72,7 +72,7 @@
     "xlsx": "^0.18.5"
   },
   "bugs": {
-    "url": "https://github.com/Ranilson-Nascimento/br-dates-lib/issues"
+    "url": "https://github.com/Ranilson-Nascimento/br-dates-library/issues"
   },
-  "homepage": "https://ranilson-nascimento.github.io/br-dates-lib"
+  "homepage": "https://ranilson-nascimento.github.io/br-dates-library"
 }

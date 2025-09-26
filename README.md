@@ -1,10 +1,10 @@
-# br-dates-lib — datas úteis e feriados do Brasil
+# br-dates-library — datas úteis e feriados do Brasil
 
-[![CI](https://github.com/Ranilson-Nascimento/br-dates-lib/actions/workflows/ci.yml/badge.svg)](https://github.com/Ranilson-Nascimento/br-dates-lib/actions/workflows/ci.yml)
-[![Release](https://github.com/Ranilson-Nascimento/br-dates-lib/actions/workflows/release.yml/badge.svg)](https://github.com/Ranilson-Nascimento/br-dates-lib/actions/workflows/release.yml)
-[![Pages](https://github.com/Ranilson-Nascimento/br-dates-lib/actions/workflows/pages.yml/badge.svg)](https://ranilson-nascimento.github.io/br-dates-lib/)
-[![npm version](https://img.shields.io/npm/v/br-dates-lib.svg)](https://www.npmjs.com/package/br-dates-lib)
-[![npm downloads](https://img.shields.io/npm/dm/br-dates-lib.svg)](https://www.npmjs.com/package/br-dates-lib)
+[![CI](https://github.com/Ranilson-Nascimento/br-dates-library/actions/workflows/ci.yml/badge.svg)](https://github.com/Ranilson-Nascimento/br-dates-library/actions/workflows/ci.yml)
+[![Release](https://github.com/Ranilson-Nascimento/br-dates-library/actions/workflows/release.yml/badge.svg)](https://github.com/Ranilson-Nascimento/br-dates-library/actions/workflows/release.yml)
+[![Pages](https://github.com/Ranilson-Nascimento/br-dates-library/actions/workflows/pages.yml/badge.svg)](https://ranilson-nascimento.github.io/br-dates-library/)
+[![npm version](https://img.shields.io/npm/v/br-dates-library.svg)](https://www.npmjs.com/package/br-dates-library)
+[![npm downloads](https://img.shields.io/npm/dm/br-dates-library.svg)](https://www.npmjs.com/package/br-dates-library)
 
 Biblioteca para cálculo de dias úteis e feriados no Brasil. Fornece:
 
@@ -17,15 +17,15 @@ Biblioteca para cálculo de dias úteis e feriados no Brasil. Fornece:
 ## Instalação
 
 ```bash
-npm install br-dates-lib
+npm install br-dates-library
 # ou (pnpm)
-pnpm add br-dates-lib
+pnpm add br-dates-library
 ```
 
 ## Quickstart — Node (exemplo mínimo)
 
 ```ts
-import { createCalendar, parseBR, toBR, Providers } from "br-dates-lib";
+import { createCalendar, parseBR, toBR, Providers } from "br-dates-library";
 
 async function example() {
   const cal = createCalendar({
@@ -48,19 +48,19 @@ example();
 - Próximo dia útil a partir de uma data:
 
 ```bash
-npx br-dates-lib next 2026-05-01 --state SP --city "São Paulo"
+npx br-dates-library next 2026-05-01 --state SP --city "São Paulo"
 ```
 
 - Verificar se a data é feriado:
 
 ```bash
-npx br-dates-lib ish 2026-11-15
+npx br-dates-library ish 2026-11-15
 ```
 
 - Listar feriados do ano (por UF):
 
 ```bash
-npx br-dates-lib list 2026 --state SP
+npx br-dates-library list 2026 --state SP
 ```
 
 **Observação:** no PowerShell use aspas duplas como no exemplo acima; em shells UNIX simples as aspas simples também funcionam.
@@ -69,7 +69,7 @@ npx br-dates-lib list 2026 --state SP
 
 ```tsx
 import React, { useEffect, useState } from 'react';
-import { useBusinessCalendar } from 'br-dates-lib';
+import { useBusinessCalendar } from 'br-dates-library';
 
 export function DueDate({ iso, uf, cidade }: { iso: string; uf?: string; cidade?: string }) {
   const { calendar, ready, error } = useBusinessCalendar({ state: uf, city: cidade, profile: 'fiscal', preloadYears: [new Date().getFullYear()] });
@@ -92,7 +92,7 @@ import { createCalendar, Providers, FSCache } from "br-dates-lib";
 
 const cal = createCalendar({
   providers: [Providers.brasilApi(), Providers.nagerDate()],
-  cache: new FSCache(".br-dates-lib-cache")
+  cache: new FSCache(".br-dates-library-cache")
 });
 ```
 
@@ -189,7 +189,7 @@ MIT
 Se este projeto te ajudou, considere apoiar o desenvolvimento:
 
 - ⭐ **Star** o repositório no GitHub
-- 🐛 **Report** bugs ou sugestões nas [Issues](https://github.com/Ranilson-Nascimento/br-dates-lib/issues)
+- 🐛 **Report** bugs ou sugestões nas [Issues](https://github.com/Ranilson-Nascimento/br-dates-library/issues)
 - 💻 **Contribua** com código via Pull Requests
 - ☕ **Doe** via [GitHub Sponsors](https://github.com/sponsors/Ranilson-Nascimento)
 

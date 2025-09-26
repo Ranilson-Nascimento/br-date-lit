@@ -1,9 +1,9 @@
 
-# br-dates-lib
+# br-dates-library
 
 Datas úteis e feriados do Brasil: **simples**, **robusto**, **extensível** — com fallback local e providers remotos (BrasilAPI/Nager.Date), cache pluggable e dataset para **todas as UFs e municípios**.
 
-> Repositório: [GitHub](https://github.com/Ranilson-Nascimento/br-dates-lib)
+> Repositório: [GitHub](https://github.com/Ranilson-Nascimento/br-dates-library)
 
 ### Destaques
 - Próximo dia útil, intervalo de dias úteis, ajuste **fiscal**.

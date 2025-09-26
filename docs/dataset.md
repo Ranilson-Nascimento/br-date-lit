@@ -14,6 +14,6 @@ dataset/
 
 Importe tudo:
 ```bash
-npx br-dates-lib import-dir ./dataset
-npx br-dates-lib verify 2026
+npx br-dates-library import-dir ./dataset
+npx br-dates-library verify 2026
 ```

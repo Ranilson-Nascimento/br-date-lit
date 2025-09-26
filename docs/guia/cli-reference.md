@@ -5,7 +5,7 @@ Comandos principais:
 - `next <date>` — calcula o próximo dia útil a partir da data informada.
   - Exemplo (PowerShell):
   ```powershell
-  npx br-dates-lib next 2026-05-01 --state SP --city "São Paulo"
+  npx br-dates-library next 2026-05-01 --state SP --city "São Paulo"
   ```
 
 - `ish <date>` — verifica se a data é feriado e retorna informações.
@@ -24,7 +24,7 @@ Exemplo avançado (PowerShell):
 
 ```powershell
 # Próximo dia útil considerando perfil fiscal e cache em disco
-npx br-dates-lib next 2026-05-01 --state SP --city "São Paulo" --profile fiscal
+npx br-dates-library next 2026-05-01 --state SP --city "São Paulo" --profile fiscal
 ```
 
 Observações
