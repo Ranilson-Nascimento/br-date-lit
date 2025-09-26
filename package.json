@@ -1,5 +1,5 @@
 {
-  "name": "br-date-lit",
+  "name": "br-dates-lib",
   "version": "0.4.0",
   "description": "Datas úteis e feriados do Brasil: simples, robusto, extensível, com fallback local + provedores remotos (BrasilAPI / Nager.Date).",
   "keywords": [
@@ -33,7 +33,7 @@
     }
   },
   "bin": {
-    "br-date-lit": "dist/cli.cjs"
+    "br-dates-lib": "dist/cli.cjs"
   },
   "scripts": {
     "build": "tsup",

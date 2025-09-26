@@ -3,8 +3,8 @@
 [![CI](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/ci.yml/badge.svg)](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/ci.yml)
 [![Release](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/release.yml/badge.svg)](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/release.yml)
 [![Pages](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/pages.yml/badge.svg)](https://ranilson-nascimento.github.io/br-date-lit/)
-[![npm version](https://img.shields.io/npm/v/br-date-lit.svg)](https://www.npmjs.com/package/br-date-lit)
-[![npm downloads](https://img.shields.io/npm/dm/br-date-lit.svg)](https://www.npmjs.com/package/br-date-lit)
+[![npm version](https://img.shields.io/npm/v/br-dates-lib.svg)](https://www.npmjs.com/package/br-dates-lib)
+[![npm downloads](https://img.shields.io/npm/dm/br-dates-lib.svg)](https://www.npmjs.com/package/br-dates-lib)
 
 Biblioteca para cálculo de dias úteis e feriados no Brasil. Fornece:
 
@@ -17,15 +17,15 @@ Biblioteca para cálculo de dias úteis e feriados no Brasil. Fornece:
 ## Instalação
 
 ```bash
-npm install br-date-lit
+npm install br-dates-lib
 # ou (pnpm)
-pnpm add br-date-lit
+pnpm add br-dates-lib
 ```
 
 ## Quickstart — Node (exemplo mínimo)
 
 ```ts
-import { createCalendar, parseBR, toBR, Providers } from "br-date-lit";
+import { createCalendar, parseBR, toBR, Providers } from "br-dates-lib";
 
 async function example() {
   const cal = createCalendar({
@@ -48,19 +48,19 @@ example();
 - Próximo dia útil a partir de uma data:
 
 ```bash
-npx br-date-lit next 2026-05-01 --state SP --city "São Paulo"
+npx br-dates-lib next 2026-05-01 --state SP --city "São Paulo"
 ```
 
 - Verificar se a data é feriado:
 
 ```bash
-npx br-date-lit ish 2026-11-15
+npx br-dates-lib ish 2026-11-15
 ```
 
 - Listar feriados do ano (por UF):
 
 ```bash
-npx br-date-lit list 2026 --state SP
+npx br-dates-lib list 2026 --state SP
 ```
 
 **Observação:** no PowerShell use aspas duplas como no exemplo acima; em shells UNIX simples as aspas simples também funcionam.
@@ -69,7 +69,7 @@ npx br-date-lit list 2026 --state SP
 
 ```tsx
 import React, { useEffect, useState } from 'react';
-import { useBusinessCalendar } from 'br-date-lit';
+import { useBusinessCalendar } from 'br-dates-lib';
 
 export function DueDate({ iso, uf, cidade }: { iso: string; uf?: string; cidade?: string }) {
   const { calendar, ready, error } = useBusinessCalendar({ state: uf, city: cidade, profile: 'fiscal', preloadYears: [new Date().getFullYear()] });
@@ -88,7 +88,7 @@ export function DueDate({ iso, uf, cidade }: { iso: string; uf?: string; cidade?
 ## Cache (exemplo de uso)
 
 ```ts
-import { createCalendar, Providers, FSCache } from "br-date-lit";
+import { createCalendar, Providers, FSCache } from "br-dates-lib";
 
 const cal = createCalendar({
   providers: [Providers.brasilApi(), Providers.nagerDate()],
