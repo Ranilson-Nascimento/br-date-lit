@@ -1,0 +1,38 @@
+
+name: Nightly ETL
+
+on:
+  schedule:
+    - cron: "0 3 * * *"  # 03:00 UTC diariamente
+  workflow_dispatch:
+
+jobs:
+  etl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: Rodar ETL (baixar fontes e gerar dataset)
+        run: npx ts-node --transpile-only scripts/etl-fetch-and-build.ts
+        env:
+          DATA_SOURCES: ${{ secrets.DATA_SOURCES }}
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b chore/etl-$(date +%Y%m%d)
+          git add dataset
+          git commit -m "chore(dataset): ETL automático"
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: "chore(dataset): ETL automático"
+          body: "Atualização automática do dataset via fontes configuradas (DATA_SOURCES)."
+          branch: "chore/etl-auto"
+          base: "main"

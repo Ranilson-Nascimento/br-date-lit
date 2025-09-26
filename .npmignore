@@ -1,0 +1,10 @@
+
+.github/
+.changeset/
+dataset/
+apps/
+docs/
+scripts/
+tests/
+samples/
+*.md

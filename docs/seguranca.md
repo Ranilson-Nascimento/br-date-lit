@@ -1,0 +1,4 @@
+
+# Segurança
+
+Consulte `SECURITY.md`.

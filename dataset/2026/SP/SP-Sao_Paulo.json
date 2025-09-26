@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "source": "amostra-local",
+  "holidays": [
+    {
+      "year": 2026,
+      "scope": "state",
+      "uf": "SP",
+      "id": "revolucao_constitucionalista",
+      "name": "Revolução Constitucionalista (SP)",
+      "date": "2026-07-09"
+    },
+    {
+      "year": 2026,
+      "scope": "municipal",
+      "uf": "SP",
+      "city": "São Paulo",
+      "id": "aniversario_sp",
+      "name": "Aniversário de São Paulo",
+      "date": "2026-01-25"
+    }
+  ]
+}

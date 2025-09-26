@@ -1,0 +1,77 @@
+{
+  "name": "br-date-lit",
+  "version": "0.3.0",
+  "description": "Datas úteis e feriados do Brasil: simples, robusto, extensível, com fallback local + provedores remotos (BrasilAPI / Nager.Date).",
+  "keywords": [
+    "brasil",
+    "datas",
+    "dias-uteis",
+    "feriados",
+    "calendario",
+    "erp",
+    "boleto",
+    "pix",
+    "tributacao",
+    "br"
+  ],
+  "license": "MIT",
+  "author": "Ranilson Nascimento",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ranilson-Nascimento/br-date-lit.git"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "br-date-lit": "dist/cli.cjs"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "changeset": "changeset",
+    "version-pack": "changeset version && npm run build",
+    "release": "npm run version-pack && changeset publish",
+    "demo": "node apps/demo/server.cjs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "validate:dataset": "ts-node --transpile-only scripts/validate-dataset.ts dataset",
+    "etl:xlsx": "ts-node --transpile-only scripts/etl-xlsx-to-dataset.ts"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.3",
+    "@changesets/cli": "^2.27.8",
+    "@types/react": "^18.2.26",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "eslint": "^9.36.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.0",
+    "typescript": "^5.6.2",
+    "vitepress": "^1.3.4",
+    "vitest": "^2.1.1",
+    "xlsx": "^0.18.5"
+  },
+  "bugs": {
+    "url": "https://github.com/Ranilson-Nascimento/br-date-lit/issues"
+  },
+  "homepage": "https://github.com/Ranilson-Nascimento/br-date-lit"
+}
