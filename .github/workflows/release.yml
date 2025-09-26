@@ -37,6 +37,13 @@ jobs:
         if: steps.changesets.outputs.has_changesets == 'true'
       - run: npx changeset version
         if: steps.changesets.outputs.has_changesets == 'true'
+      - run: git add .
+        if: steps.changesets.outputs.has_changesets == 'true'
+      - run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -m "chore: version bump"
+        if: steps.changesets.outputs.has_changesets == 'true'
       - run: npm run build
         if: steps.changesets.outputs.has_changesets == 'true'
       - run: npx changeset publish
