@@ -18,14 +18,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check for changesets
+        id: changesets
+        run: |
+          if [ -n "$(find .changeset -name '*.md' | grep -v config.json)" ]; then
+            echo "has_changesets=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changesets=false" >> $GITHUB_OUTPUT
+          fi
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
+        if: steps.changesets.outputs.has_changesets == 'true'
       - run: npm ci
+        if: steps.changesets.outputs.has_changesets == 'true'
       - run: npm run build
+        if: steps.changesets.outputs.has_changesets == 'true'
       - run: npx changeset version
+        if: steps.changesets.outputs.has_changesets == 'true'
       - run: npm run build
+        if: steps.changesets.outputs.has_changesets == 'true'
       - run: npx changeset publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: steps.changesets.outputs.has_changesets == 'true'
