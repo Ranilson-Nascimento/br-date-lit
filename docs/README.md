@@ -1,5 +1,5 @@
 
-# br-date-lit
+# br-dates-lib
 
 Datas úteis e feriados do Brasil: **simples**, **robusto**, **extensível** — com fallback local e providers remotos (BrasilAPI/Nager.Date), cache pluggable e dataset para **todas as UFs e municípios**.
 

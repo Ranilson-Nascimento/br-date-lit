@@ -1,4 +1,4 @@
-# br-date-lit — datas úteis e feriados do Brasil
+# br-dates-lib — datas úteis e feriados do Brasil
 
 [![CI](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/ci.yml/badge.svg)](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/ci.yml)
 [![Release](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/release.yml/badge.svg)](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/release.yml)
@@ -92,7 +92,7 @@ import { createCalendar, Providers, FSCache } from "br-dates-lib";
 
 const cal = createCalendar({
   providers: [Providers.brasilApi(), Providers.nagerDate()],
-  cache: new FSCache(".br-date-lit-cache")
+  cache: new FSCache(".br-dates-lib-cache")
 });
 ```
 

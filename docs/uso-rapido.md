@@ -2,14 +2,14 @@
 # Uso Rápido
 
 ```ts
-import { createCalendar, Providers, FSCache, parseBR, toBR } from "br-date-lit";
+import { createCalendar, Providers, FSCache, parseBR, toBR } from "br-dates-lib";
 
 const cal = createCalendar({
   profile: "comercial",
   state: "SP",
   city: "São Paulo",
   providers: [Providers.brasilApi(), Providers.nagerDate()],
-  cache: new FSCache(".br-date-lit-cache")
+  cache: new FSCache(".br-dates-lib-cache")
 });
 
 console.log(await cal.isBusinessDay(parseBR("01/05/2026")));

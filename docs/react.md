@@ -2,7 +2,7 @@
 # Hooks React
 
 ```tsx
-import { useBusinessCalendar } from "br-date-lit";
+import { useBusinessCalendar } from "br-dates-lib";
 
 export function Badge({ iso }: { iso: string }) {
   const { calendar, ready } = useBusinessCalendar({ profile: "fiscal", preloadYears: [new Date().getFullYear()] });

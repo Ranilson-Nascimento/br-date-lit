@@ -1,5 +1,5 @@
 # Instalação
 
 ```bash
-npm i br-date-lit
+npm i br-dates-lib
 ```

@@ -9,7 +9,7 @@ Assinatura (resumida):
 Exemplo básico:
 ```tsx
 import React, { useEffect, useState } from 'react';
-import { useBusinessCalendar } from 'br-date-lit';
+import { useBusinessCalendar } from 'br-dates-lib';
 
 export function DueDate({ iso, uf, cidade }: { iso: string; uf?: string; cidade?: string }) {
   const { calendar, ready } = useBusinessCalendar({ state: uf, city: cidade, profile: 'fiscal', preloadYears: [new Date().getFullYear()] });
@@ -37,7 +37,7 @@ Shape retornado (exemplo):
 
 Dicas de uso
 - Para evitar flicker no primeiro render, use `preloadYears: [new Date().getFullYear()]` para pré-carregar o ano atual.
-- Se você precisar de tipagem mais forte, importe os tipos públicos do pacote (`import type { Calendar } from 'br-date-lit'`).
+- Se você precisar de tipagem mais forte, importe os tipos públicos do pacote (`import type { Calendar } from 'br-dates-lib'`).
 
 Exemplo com tratamento de erro:
 ```tsx
