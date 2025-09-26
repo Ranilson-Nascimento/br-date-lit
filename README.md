@@ -1,8 +1,8 @@
 # br-dates-lib — datas úteis e feriados do Brasil
 
-[![CI](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/ci.yml/badge.svg)](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/ci.yml)
-[![Release](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/release.yml/badge.svg)](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/release.yml)
-[![Pages](https://github.com/Ranilson-Nascimento/br-date-lit/actions/workflows/pages.yml/badge.svg)](https://ranilson-nascimento.github.io/br-date-lit/)
+[![CI](https://github.com/Ranilson-Nascimento/br-dates-lib/actions/workflows/ci.yml/badge.svg)](https://github.com/Ranilson-Nascimento/br-dates-lib/actions/workflows/ci.yml)
+[![Release](https://github.com/Ranilson-Nascimento/br-dates-lib/actions/workflows/release.yml/badge.svg)](https://github.com/Ranilson-Nascimento/br-dates-lib/actions/workflows/release.yml)
+[![Pages](https://github.com/Ranilson-Nascimento/br-dates-lib/actions/workflows/pages.yml/badge.svg)](https://ranilson-nascimento.github.io/br-dates-lib/)
 [![npm version](https://img.shields.io/npm/v/br-dates-lib.svg)](https://www.npmjs.com/package/br-dates-lib)
 [![npm downloads](https://img.shields.io/npm/dm/br-dates-lib.svg)](https://www.npmjs.com/package/br-dates-lib)
 
@@ -189,7 +189,7 @@ MIT
 Se este projeto te ajudou, considere apoiar o desenvolvimento:
 
 - ⭐ **Star** o repositório no GitHub
-- 🐛 **Report** bugs ou sugestões nas [Issues](https://github.com/Ranilson-Nascimento/br-date-lit/issues)
+- 🐛 **Report** bugs ou sugestões nas [Issues](https://github.com/Ranilson-Nascimento/br-dates-lib/issues)
 - 💻 **Contribua** com código via Pull Requests
 - ☕ **Doe** via [GitHub Sponsors](https://github.com/sponsors/Ranilson-Nascimento)
 

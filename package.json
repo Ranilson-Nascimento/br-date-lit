@@ -18,7 +18,7 @@
   "author": "Ranilson Nascimento",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ranilson-Nascimento/br-date-lit.git"
+    "url": "git+https://github.com/Ranilson-Nascimento/br-dates-lib.git"
   },
   "sideEffects": false,
   "type": "module",
@@ -72,7 +72,7 @@
     "xlsx": "^0.18.5"
   },
   "bugs": {
-    "url": "https://github.com/Ranilson-Nascimento/br-date-lit/issues"
+    "url": "https://github.com/Ranilson-Nascimento/br-dates-lib/issues"
   },
-  "homepage": "https://ranilson-nascimento.github.io/br-date-lit"
+  "homepage": "https://ranilson-nascimento.github.io/br-dates-lib"
 }
