@@ -1,3 +1,3 @@
-# br-date-lit
+# br-dates-lib
 
 Datas úteis e feriados do Brasil.
