@@ -1,6 +1,6 @@
 {
   "name": "br-date-lit",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Datas úteis e feriados do Brasil: simples, robusto, extensível, com fallback local + provedores remotos (BrasilAPI / Nager.Date).",
   "keywords": [
     "brasil",
